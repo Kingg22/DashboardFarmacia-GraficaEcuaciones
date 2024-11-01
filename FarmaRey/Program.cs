@@ -21,9 +21,10 @@ namespace FarmaRey
             // añadir los forms al service collection para que le coloque las dependencias
             services.AddTransient<FrmDashboard>();
             services.AddTransient<FrmAgregarMed>();
+            services.AddTransient<FrmInicio>();
             var serviceProvider = services.BuildServiceProvider();
             // inyectar la dependencia requerida del forms
-            var form = serviceProvider.GetRequiredService<FrmDashboard>();
+            var form = serviceProvider.GetRequiredService<FrmInicio>();
             // iniciar la aplicación
             // Los logs no se ven por consola I don't know why, pero estarán en el archivo
             Application.Run(form);
